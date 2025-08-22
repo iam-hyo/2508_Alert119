@@ -1,0 +1,107 @@
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.App-header {
+  /* CSS 변수 사용 */
+  background-color: var(--header-bg-color);
+  padding: 20px;
+  color: var(--header-text-color);
+  text-align: center;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+}
+
+hr {
+  margin: 2rem 0;
+  border: none;
+  border-top: 1px solid var(--border-color);
+}
+
+.form-container, .list-container {
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background-color: var(--bg-secondary-color);
+}
+
+h2 {
+  margin-top: 0;
+  color: var(--text-color);
+}
+
+/* input, select, textarea 공통 스타일 */
+input[type="text"], input[type="tel"], select, textarea {
+  width: calc(100% - 22px); /* padding 고려 */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: 16px;
+}
+
+/* 버튼 공통 스타일 */
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s; /* 부드러운 색상 변경 효과 */
+}
+
+/* 저장 버튼 (파란색 계열) */
+.form-container button {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.form-container button:hover {
+  background-color: var(--accent-hover-color);
+}
+
+.message-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+/* 전송 버튼 (빨간색 계열) */
+.send-btn {
+  background-color: var(--danger-color);
+  color: white;
+  align-self: flex-end; /* 오른쪽 정렬 */
+}
+
+.send-btn:hover {
+  background-color: var(--danger-hover-color);
+}
+
+/* 테이블 스타일 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid var(--border-color);
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--bg-color);
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--bg-secondary-color);
+}
+
+tbody tr:hover {
+  background-color: var(--border-color);
+}

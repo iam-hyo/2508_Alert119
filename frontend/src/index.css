@@ -1,0 +1,89 @@
+:root {
+  /* 라이트 모드 기본 색상 */
+  --bg-color: #ffffff;
+  --bg-secondary-color: #f8f9fa;
+  --text-color: #212529;
+  --header-bg-color: #282c34;
+  --header-text-color: #ffffff;
+  --border-color: #dee2e6;
+  --accent-color: #007bff;
+  --accent-hover-color: #0056b3;
+  --danger-color: #dc3545;
+  --danger-hover-color: #c82333;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* 다크 모드 색상 (위의 변수들을 덮어씁니다) */
+    --bg-color: #1a1a1a;
+    --bg-secondary-color: #242424;
+    --text-color: #f8f9fa;
+    --header-bg-color: #121212;
+    --header-text-color: #f8f9fa;
+    --border-color: #495057;
+    --accent-color: #2589fd;
+    --accent-hover-color: #0a7bed;
+    --danger-color: #f15a69;
+    --danger-hover-color: #ef4254;
+  }
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* body의 배경과 글자색에 위에서 정의한 변수를 적용합니다. */
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.2s, color 0.2s; /* 테마 변경 시 부드러운 전환 효과 */
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
